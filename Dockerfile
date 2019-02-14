@@ -12,8 +12,4 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 ENTRYPOINT ["/tini", "--"]
 
-ADD requirements.txt /
-
-RUN pip3 install --no-cache-dir -r /requirements.txt 
-
 CMD ["/bin/sh"]
